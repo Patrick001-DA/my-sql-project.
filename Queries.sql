@@ -62,3 +62,46 @@ limit 1;
 select*
 from bank_customers
 where loan_amount>300000
+
+-  Calculate loan-to-balance ratio for each customer.
+ select customer_name,balance, loan_amount/balance as loan_balance_Ratio
+ from bank_customers;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+-- Categorize customers as High, Medium, or Low credit risk using CASE.
+
+select *,
+      Case
+          when credit_score>= 700 then 'low risk'
+          when credit_score>= 650 then 'medium risk'
+          else 'high risk'
+      end as credit_risk
+ from bank_customers;
+
+
+
+-- Find the total balance held by each account type.
+
+select  account_type,sum(balance)
+from bank_customers
+group by account_type;
+
+
+
+
+
+
+
+
+
+
+-- 
+
+
+
