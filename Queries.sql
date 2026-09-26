@@ -1,4 +1,4 @@
-- display all customers
+-- display all customers
 
 select *
 from bank_customers;
@@ -92,7 +92,7 @@ select  account_type,sum(balance)
 from bank_customers
 group by account_type;
 
-- Rank customers by account balance using RANK()
+--  Rank customers by account balance using RANK()
 
 select customer_name, account_type,
  rank() over (order by balance desc) as rank_balance
