@@ -20,7 +20,7 @@ Table: `bank_customers`
 
 ## Tools
 
-- SQL ([MySQL / DB Fiddle / other])
+- SQL ( DB Fiddle)
 
 ## Questions Answered
 
